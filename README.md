@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_apis/build/status/chef-base-plans.bc?branchName=master)](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_build/latest?definitionId=69&branchName=master)
+[![Build Status](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_apis/build/status/chef-base-plans.bc?branchName=master)](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_build/latest?definitionId=76&branchName=master)
 
 # bc
 
@@ -38,6 +38,21 @@ will add the following binaries to the PATH:
 
 * /bin/dc
 * /bin/bc
+
+For example:
+
+```bash
+$ hab pkg install core/bc --binlink
+» Installing core/bc
+☁ Determining latest version of core/bc in the 'stable' channel
+→ Found newer installed version (core/bc/1.07.1/20200619091101) than remote version (core/bc/1.07.1/20200305233308)
+→ Using core/bc/1.07.1/20200619091101
+★ Install of core/bc/1.07.1/20200619091101 complete with 0 new packages installed.
+» Binlinking dc from core/bc/1.07.1/20200619091101 into /bin
+★ Binlinked dc from core/bc/1.07.1/20200619091101 to /bin/dc
+» Binlinking bc from core/bc/1.07.1/20200619091101 into /bin
+★ Binlinked bc from core/bc/1.07.1/20200619091101 to /bin/bc
+```
 
 #### Using an example binary
 
