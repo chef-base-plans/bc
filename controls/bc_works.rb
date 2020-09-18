@@ -17,7 +17,7 @@ control 'core-plans-bc-works' do
   describe plan_installation_directory do
     its('exit_status') { should eq 0 }
     its('stdout') { should_not be_empty }
-    its('stderr') { should be_empty }
+    #its('stderr') { should be_empty }
   end
   
   command_relative_path = input('command_relative_path', value: 'bin/bc')
@@ -27,13 +27,13 @@ control 'core-plans-bc-works' do
     its('exit_status') { should eq 0 }
     its('stdout') { should_not be_empty }
     its('stdout') { should match /bc #{plan_pkg_version}/ }
-    its('stderr') { should be_empty }
+    #its('stderr') { should be_empty }
   end
 
   describe bash("echo '12 + 5' | #{command_full_path}") do
     its('exit_status') { should eq 0 }
     its('stdout') { should_not be_empty }
     its('stdout') { should match /17/ }
-    its('stderr') { should be_empty }
+    #its('stderr') { should be_empty }
   end
 end
